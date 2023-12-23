@@ -67,38 +67,6 @@ gf MatSpec[] = { 1,1,1,0 };
 gf MatShin[] = { 120 };
 
 
-//db eyeX = 0, eyeY = 1, eyeZ = 0;
-//db centerX = 0, centerY = 0, centerZ = -5;
-//double angle_step = 0.1, move_step = 0.1, angle = 0;
-//db f = 0, r = 0;
-//void Camera(db n = 0.1)
-//{
-//	if (keys['D'])
-//		eyeX += n;
-//	if (keys['A'])
-//		eyeX -= n;
-//	if (keys['W'])
-//		eyeY += n;
-//	if (keys['S'])
-//		if (eyeY > 1) eyeY -= n;
-//	if (keys['Z'])
-//		eyeZ += n;
-//	if (keys['X'])
-//	{
-//		eyeZ -= n;
-//	}
-//
-//	if (keys[VK_LEFT])
-//		centerX += n;
-//	if (keys[VK_RIGHT])
-//		centerX -= n;
-//	if (keys[VK_UP])
-//		centerY += n;
-//	if (keys[VK_DOWN])
-//		centerY -= n;
-//	gluLookAt(eyeX, eyeY, eyeZ, centerX, centerY, centerZ, 0, 1, 0);
-//
-//}
 M3DMatrix44f shadowMat;
 M3DMatrix44f shadowMat2;
 M3DVector4f vPlaneEquation;
@@ -267,7 +235,7 @@ void drawSpongeBob() {
 
 		if (pang == 20) v *= -1;
 		if (pang == -20) v *= -1;
-		pang += v;
+		pang -= v;
 	}
 	if (keys['S'])
 	{
